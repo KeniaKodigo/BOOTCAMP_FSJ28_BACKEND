@@ -54,6 +54,7 @@
         echo "<br>";
         echo $lista_frutas[2];
 
+        //arreglo indexado (numerico)
         $lista_verduras = array("tomate","cebolla","cilantro","zanahoria");
 
         #Objetos => clave-valor
@@ -70,6 +71,22 @@
         $persona2 = new Persona();
         $persona2->nombre = "Edwin";
         $persona2->edad = 25;
+
+        $animal = new stdClass();
+        $animal->especie = "Perro";
+        $animal->raza = "Pastor Aleman";
+        $animal->nombre = "Tobby";
+
+        var_dump($animal);
+
+        //objeto lo vas a convertir arreglo asociativo
+
+        /**
+         * imprimir datos
+         * echo => imprime cadenas 
+         * var_dump() => imprime arreglos / objetos (tipo de dato)
+         * print_r() => imprime arreglos / objetos 
+         */
     ?>
 </body>
 <script src="./assets/script.js"></script>

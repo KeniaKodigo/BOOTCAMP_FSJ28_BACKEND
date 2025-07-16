@@ -1,0 +1,12 @@
+1. Declara una variable con el número de horas trabajadas en una semana. 
+   Si son más de 40, muestra "Horas extra", si no, "Horas normales".
+
+
+2. Dado un número del 1 al 12, muestra el nombre del mes correspondiente. 
+   Si el número es inválido, muestra un mensaje de error.
+
+
+3. Muestra la tabla de multiplicar del 3 usando un bucle for.
+
+
+4. Imprime los números pares del 2 al 10 usando while.
