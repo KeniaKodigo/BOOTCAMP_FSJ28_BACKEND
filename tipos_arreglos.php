@@ -68,6 +68,8 @@ $centroamerica = [
     ]
 ];
 
+$centroamerica[0]['poblacion'];
+
 echo "<h3>Multimensional</h3>";
 foreach($centroamerica as $pais){
     //print_r($pais); //el arreglo de cada pais
