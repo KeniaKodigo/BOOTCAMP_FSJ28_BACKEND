@@ -9,3 +9,5 @@ $acciones = [
     ["tipo" => "borrar", "contenido" => "a"],
     ["tipo" => "escribir", "contenido" => "mundo"]
 ];
+
+
