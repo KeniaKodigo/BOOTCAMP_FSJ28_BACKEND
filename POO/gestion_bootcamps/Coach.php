@@ -5,6 +5,7 @@ class Coach{
     public string $correo;
     public array $tecnologias;
 
+    //constructor parametrizados
     public function __construct($nombre, $correo, $tecnologias)
     {
         $this->nombre = $nombre;
@@ -12,3 +13,6 @@ class Coach{
         $this->tecnologias = $tecnologias;
     }
 }
+
+#instancia => copia, objeto (crear un objeto)
+//$coach1 = new Coach();
