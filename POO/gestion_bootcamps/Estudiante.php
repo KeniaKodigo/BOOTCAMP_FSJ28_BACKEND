@@ -1,6 +1,7 @@
 <?php
 
 #protected (herencia) / private (dentro de la clase)
+//sirven para crear objetos
 class Estudiante{
     public string $nombre;
     private string $carnet;
