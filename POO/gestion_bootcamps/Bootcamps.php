@@ -10,6 +10,11 @@
 require_once "./Estudiante.php";
 require_once "./Coach.php";
 
+interface EvaluacionBootcamps {
+    public function evaluar_proyecto();
+    public function entregar_certificado();
+}
+
 //require './Estudiante.php';
 //clase abstract
 abstract class Bootcamps{
@@ -23,6 +28,9 @@ abstract class Bootcamps{
     protected Coach $coach; //este atributo solo necesita objetos de tipo coach
     //protected string $coach; (composicion)
 
+    //atributo que cuente cuantos bootcamps hay
+    private static $contador = 0;
+
     //inicializar tu objeto
     public function __construct($titulo, $descripcion, $duracion, $coach)
     {
@@ -30,6 +38,9 @@ abstract class Bootcamps{
         $this->descripcion = $descripcion;
         $this->duracion = $duracion;
         $this->coach = $coach;
+
+        //contando el bootcamp que se construyo
+        self::$contador++;
     }
 
     public function agregarEstudiantes(Estudiante $estudiante){ //objetos de tipo estudiante
@@ -45,6 +56,10 @@ abstract class Bootcamps{
     //metodo abstracto
     public abstract function mostrarDetalle(); //clases hijas tiene que darle el comportamiento
 
+
+    public static function totalBootcamps(){
+        echo "Total de bootcamps en Kodigo hay " . self::$contador;
+    }
 }
 
 // $dimas = [

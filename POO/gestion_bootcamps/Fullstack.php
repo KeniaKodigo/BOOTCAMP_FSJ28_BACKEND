@@ -6,7 +6,7 @@ require_once "./Bootcamps.php";
 /**
  * composicion, agregacion, asociacion
  */
-class BootcampFullstackJr extends Bootcamps{
+class BootcampFullstackJr extends Bootcamps implements EvaluacionBootcamps{
 
     //aplicar polimorfismo => como un metodo puede cambiar el comportamiento
 
@@ -25,6 +25,17 @@ class BootcampFullstackJr extends Bootcamps{
 
     public function mostrarDetalle()
     {
+        echo "Bootcamp: " . $this->titulo;
+    }
+
+
+    public function evaluar_proyecto()
+    {
+        //comportamiento
+    }
+
+    public function entregar_certificado()
+    {
         //comportamiento
     }
 
@@ -36,8 +47,12 @@ $oscar = new Coach("Oscar Lemus","oscar@kodigo.org",["base dedatos","javascript"
 
 $fullstack1 = new BootcampFullstackJr("Fullstack Junior Incaf", "Desarrollo web",24, $oscar);
 
+$fullstack2 = new BootcampFullstackJr("FullstackJr 20","desarrollo web",24,$oscar);
+
 $edwar = new Estudiante("Edwar","ED2025",false,"edwar@test.com","estudiante");
 $arabela = new Estudiante("arabela","ara2025",true,"arabela@test.com","estudiante");
 $fullstack1->agregarEstudiantes($edwar);
 $fullstack1->agregarEstudiantes($arabela);
 //agregar estudiantes al fullstack
+
+BootcampFullstackJr::totalBootcamps();
