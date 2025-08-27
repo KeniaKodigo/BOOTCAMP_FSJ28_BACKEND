@@ -1,5 +1,6 @@
 <?php
 
+#contrato -> metodos abstractos
 interface NivelCursoInterface{
     public function getDuration();
 }

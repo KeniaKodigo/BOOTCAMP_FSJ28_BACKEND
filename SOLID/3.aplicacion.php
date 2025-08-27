@@ -1,5 +1,6 @@
 <?php
 
+#sustitucion de LISKOV
 interface HorarioProfesoresInterface{
     public function asignarHorario($horario);
 }

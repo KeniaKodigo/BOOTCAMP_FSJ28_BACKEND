@@ -17,8 +17,10 @@ abstract class Transporte{
 
 //contrato
 interface TransporteInterface {
+    //metodos obligatorios
     public function hacerViaje();
     public function hacerPlaca();
+
 }
 
 class Microbus extends Transporte{

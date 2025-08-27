@@ -12,15 +12,34 @@ class Estudiante{
     }
 }
 
-class GestorInscripcion {
-    private Estudiante $estudiante;
+class Maestro {
+    public $nombre;
+    public $dui;
 
-    public function __construct(Estudiante $estudiante) {
-        $this->estudiante = $estudiante;
+    public function __construct($nombre, $dui)
+    {
+        $this->nombre = $nombre;
+        $this->dui = $dui;
     }
 }
 
-$estudiante = new Estudiante("Kenia","KP2024");
+class GestorInscripcion {
+    #el atributo debe de recibir un objeto de tipo Estudiante
+    private Estudiante $estudiante;
 
-$inscripcion = new GestorInscripcion($estudiante);
-print_r($inscripcion);
+    #incializar un objeto (Estudiante)
+    public function __construct(Estudiante $estudiante) {
+        $this->estudiante = $estudiante;
+
+        echo $this->estudiante->nombre; //juanito perez
+    }
+}
+
+$juanito = new Estudiante("juanito perez","J20025");
+$rodrigo = new Estudiante("Rodrigo", "RD2024");
+
+$marvin = new Maestro("Marvin Reyes","05678909-9");
+
+$nueva_inscripcion = new GestorInscripcion($juanito);
+$nueva_inscripcion3 = new GestorInscripcion($rodrigo);
+// $nueva_inscripcion2 = new GestorInscripcion($marvin);

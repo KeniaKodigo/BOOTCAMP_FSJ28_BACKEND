@@ -1,5 +1,6 @@
 <?php
 
+#contrato
 interface GestionAcademica {
     public function registrarEstudiante();
     public function asignarProfesor();
@@ -17,5 +18,6 @@ class Curso implements GestionAcademica {
 
     public function registrarPago() {
         // Curso no debería encargarse de pagos
+        throw new Exception("La seccion de cursos no procesa pagos");
     }
 }

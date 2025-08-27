@@ -1,10 +1,16 @@
 <?php
 #violando el principio sustitucion de Liskov
 
-class Teacher {
-    public function assignTime($schedule) {
+abstract class Teacher {
+    public $name;
+
+    public function assignSchedule($schedule) {
         // code..
     }
+}
+
+class Academia{
+
 }
 
 class GuestTeacher extends Teacher {
