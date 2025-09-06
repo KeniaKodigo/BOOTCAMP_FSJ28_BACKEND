@@ -40,3 +40,8 @@ class UserAdapter implements IUserProvider{
 }
 
 //hacer el que adaptador que funcione
+$apiExterna = new OldApis();
+
+$adaptador = new UserAdapter($apiExterna);
+$data = $adaptador->getDataUser();
+echo json_encode($data, true);

@@ -35,5 +35,12 @@ class CoffeeWithMilkAndCaramel extends CoffeeWithMilk {
     }
 }
 
+class CoffeeWithCaramel{
+    
+}
+
 $coffee = new CoffeeWithMilkAndCaramel();
 echo $coffee->description() . " cuesta $" . $coffee->cost();
+
+$coffe2 = new Coffee();
+echo $coffe2->description() .  " cuesta $" . $coffee->cost();
